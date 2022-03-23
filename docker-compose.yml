@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    image: 'filebrowser/filebrowser:latest'
+ 
+    ports:
+      - '8080:80'
+    volumes:
+      - /home/nash/blackhole/docker-data/filebrowser/root:/srv
+      - /home/nash/blackhole/docker-data/filebrowser/filebrowser.db:/database/filebrowser.db
+      - /home/nash/blackhole/docker-data/filebrowser/settings.json:/config/settings.json
